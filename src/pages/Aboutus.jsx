@@ -2,9 +2,9 @@ import React from 'react'
 
 function Aboutus() {
   return (
-    <div>
-      about us page
-    </div>
+    <section id="aboutus" className="h-screen bg-gray-200 flex items-center justify-center">
+      <h2 className="text-3xl font-bold">About Us</h2>
+    </section>
   )
 }
 
