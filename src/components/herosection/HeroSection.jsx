@@ -10,6 +10,7 @@ const IMAGES = [
   { url: Idsbanner, alt: "IDS" },
 ]
 
+
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen">
@@ -27,6 +28,7 @@ const HeroSection = () => {
         </h1> */}
       </div>
 
+
       {/* Image Slider Section */}
       <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
         <div style={{ width: "100%", height: "100%" }}>
@@ -38,6 +40,7 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 
 
 
@@ -74,3 +77,4 @@ export default HeroSection;
 //     </div>
 //   );
 // };
+

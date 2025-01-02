@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar Container */}
-      <div className="bg-orange-50 flex justify-between items-center h-[80px] px-6 md:px-12 text-orange-400 fixed top-0 w-full z-10 shadow-lg">
+      <div className="bg-orange-50 flex justify-between items-center h-[80px] px-6 md:px-12 text-orange-500 fixed top-0 w-full z-10 shadow-lg">
         {/* Logo Section */}
         <h1 className="text-3xl font-bold">
           <Link to="home" smooth={true} duration={500} className="cursor-pointer">
@@ -49,7 +49,7 @@ const Navbar = () => {
                   duration={500}
                   spy={true}
                   offset={-80} // Adjusted offset to account for the navbar height
-                  activeClass="text-white-400 underline" // Active class styling
+                  activeClass="bg-orange-400 text-white rounded-full" // Active class styling
                 >
                   {item.text}
                 </Link>
@@ -108,8 +108,7 @@ const Navbar = () => {
                 duration={500}
                 spy={true}
                 offset={-80} // Adjusted offset for navbar height
-                activeClass="text-white-400 underline"
-                // Active class styling
+                activeClass="bg-orange-400 text-white rounded-xl" // Active class styling
                 onClick={() => setNav(false)} // Close menu on item click
               >
                 {item.text}
