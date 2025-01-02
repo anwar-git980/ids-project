@@ -2,12 +2,12 @@ import React from 'react'
 import Footer from '../Footer/footer'
 import Navbar from '../Navbar/navbar'
 
-function Layout({Children}) {
+function Layout({children}) {
   return (
     <div>
       {/* <Navbar/> */}
       <div className='bg-background min-h-screen'>
-        {Children}
+        {children}
       </div>
       {/* <Footer /> */}
     </div>

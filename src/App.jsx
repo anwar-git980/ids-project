@@ -1,40 +1,50 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
-
-import Home from './pages/home';
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
-import Aboutus from './pages/aboutus';
-import Projects from './pages/projects';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
 import HeroSection from './components/herosection/HeroSection';
+import Aboutus from './pages/Aboutus';
+import Services from './pages/Services';
+import Projects from './pages/Projects';
 
-// const Home = () => <div>Home Page</div>;
-// const Aboutus = () => <div>About Us Page</div>;
-// const Services = () => <div>Services Page</div>;
-// const Projects = () => <div>Projects Page</div>;
-// const Contact = () => <div>Contact Page</div>;
+
+
+const imageUrls = [
+  'https://via.placeholder.com/150',
+  'https://via.placeholder.com/150',
+  'https://via.placeholder.com/150',
+  'https://via.placeholder.com/150',
+];
+
 
 function App() {
   return (
-    <Router>
+    <div>
+      {/* Navbar */}
       <Navbar />
-      <HeroSection />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/aboutus" element={<Aboutus />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+
+      {/* Sections */}
+      <div id="home" className="h-screen bg-gray-100 flex items-center justify-center">
+        <HeroSection />
+      </div>
+      <div id="aboutus" className="h-screen bg-orange-100 flex items-center justify-center">
+        <Aboutus images={imageUrls} />
+      </div>
+      <div id="services" className=" bg-orange-100 ">
+        <Services />
+      </div>
+      <br></br>
+      <div id="projects" className="">
+      <Projects />
+      </div>
+      <div id="contact" className="h-screen bg-gray-500 flex items-center justify-center">
+        <h2 className="text-3xl font-bold">Contact Us</h2>
+      </div>
+      {/* Footer */}
       <Footer />
-    </Router>
+    </div>
   );
 }
 
 export default App;
+
+
