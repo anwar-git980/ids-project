@@ -46,9 +46,9 @@
 //       <div id="contact" className="">
 //       <Contactus />
 //       </div>
-      // <div id="trunkey" className="">
-      // <Trunkey />
-      // </div>
+// <div id="trunkey" className="">
+// <Trunkey />
+// </div>
 //       {/* Footer */}
 //       <Footer />
 //     </div>
@@ -139,15 +139,15 @@ function App() {
           }
         />
         <Route path="/ServicesPages/trunkey" element={<Trunkey />} />
-        <Route path="/ServicesPages/interior" element={<Interior/>} />
+        <Route path="/ServicesPages/interior" element={<Interior />} />
         <Route path="/ServicesPages/civil" element={<Civil />} />
         <Route path="/ServicesPages/exterior" element={<Exterior />} />
         <Route path="/ServicesPages/painting" element={<Painting />} />
-        <Route path="/ServicesPages/electrical" element={<Electrical/>} />
+        <Route path="/ServicesPages/electrical" element={<Electrical />} />
 
-        <Route path="/ProjectPages/retail" element={<Retail/>} />
-        <Route path="/ProjectPages/residential" element={<Residential/>} />
-        <Route path="/ProjectPages/commercial" element={<Commercial/>} />
+        <Route path="/ProjectPages/retail" element={<Retail />} />
+        <Route path="/ProjectPages/residential" element={<Residential />} />
+        <Route path="/ProjectPages/commercial" element={<Commercial />} />
 
       </Routes>
 
