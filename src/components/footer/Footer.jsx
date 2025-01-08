@@ -171,8 +171,8 @@ const Footer = () => {
           <br></br>
           <h3 className="text-white font-semibold text-xl mb-4 whitespace-nowrap">Interior Design Studio</h3>
           <p className="text-black text-lg leading-relaxed mb-8">
-            Welcome to Interior Design Studio. <br/>
-            At <b>Interior Design Studio</b>, established in 2002, we provide complete interior design solutions, from planning and designing to installation.<br></br>
+          Welcome to Interior Design Studio.<br></br>
+          At Interior Design Studio, established in 2002, we provide complete interior design solutions, from planning and designing to installation.
           </p>
         </div>
 
@@ -181,12 +181,12 @@ const Footer = () => {
         <div className="mt-4">
           <h3 className="text-white font-semibold text-xl mb-4 whitespace-nowrap">Services</h3>
           <ul>
-          <li className="mb-2 text-lg">Trunkey Contract</li>
-          <li className="mb-2 text-lg">Interiors Services</li>
-          <li className="mb-2 text-lg">Civil Services</li>
-          <li className="mb-2 text-lg">Exterior Services</li>
-          <li className="mb-2 text-lg">Painting Services</li>
-          <li className="mb-2 text-lg">Electrical Services</li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/trunkey" className="hover:underline">Trunkey Contract</a></li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/interior" className="hover:underline">Interiors Services</a></li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/civil" className="hover:underline">Civil Services</a></li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/exterior" className="hover:underline">Exterior Services</a></li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/painting" className="hover:underline">Painting Services</a></li>
+          <li className="mb-2 text-lg"><a href="/ServicesPages/electrical" className="hover:underline">Electrical Services</a></li>
           </ul>
         </div>
 
@@ -194,10 +194,10 @@ const Footer = () => {
         <div className="mt-4">
           <h3 className="text-white font-semibold text-xl mb-4 whitespace-nowrap">Company</h3>
           <ul>
-            <li className="mb-2 text-lg"><a href="/" className="hover:underline">About us</a></li>
-            <li className="mb-2 text-lg"><a href="/" className="hover:underline">Our Projects</a></li>
-            <li className="mb-2 text-lg"><a href="/" className="hover:underline">Our Services</a></li>
-            <li className="mb-2 text-lg"><a href="/" className="hover:underline">Contact us</a></li>
+            <li className="mb-2 text-lg"><a href="#" className="hover:underline">About us</a></li>
+            <li className="mb-2 text-lg"><a href="#" className="hover:underline">Projects</a></li>
+            <li className="mb-2 text-lg"><a href="#" className="hover:underline">Services</a></li>
+            <li className="mb-2 text-lg"><a href="#" className="hover:underline">Contact us</a></li>
           </ul>
         </div>
 
@@ -211,11 +211,11 @@ const Footer = () => {
             <a href="https://www.instagram.com/alamshaikh1211/profilecard/?igsh=MTc0YWxodDYxNzhheg==" target="_blank" rel="noopener noreferrer">
               <FaInstagram size={30} />
             </a>
-            <a href="https://wa.me/+919619836554" target="_blank" rel="noopener noreferrer">
-              <FaWhatsapp size={30} />
-            </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <FaXTwitter size={30} />
+            </a>
+            <a href="https://wa.me/+919619836554" target="_blank" rel="noopener noreferrer">
+                        <FaWhatsapp size={30} className="hover:text-orange-600 transition-colors duration-300" />
             </a>
           </div>
         </div>
@@ -226,7 +226,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="max-w-6xl mx-auto px-4 mt-4 flex flex-col md:flex-row justify-between items-center text-sm">
-        <p>&copy;2002 Interior Design Studio, All rights reserved.</p>
+        <p>&copy;2025 Interior Design Studio, All rights reserved.</p>
       </div>
     </footer>
   );

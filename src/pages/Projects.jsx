@@ -1,7 +1,6 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import { HashLink } from "react-router-hash-link";
 
 function Projects({ image, projects, clients, experience }) {
   const { ref, inView } = useInView({
