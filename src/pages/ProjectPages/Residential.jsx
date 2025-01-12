@@ -11,7 +11,7 @@ const Residential = () => {
       id: 1,
       title: "Personalized Living Spaces",
       description: "At Interior Designer Studio, We design residential spaces that are tailored to each client's lifestyle and preferences.",
-      image: "/public/residentialone.jpg",
+      image: "/residentialone.jpg",
       details: [
         "Our team works closely with clients to understand their needs and deliver customized solutions that make their homes truly unique."
       ]
@@ -20,7 +20,7 @@ const Residential = () => {
       id: 2,
       title: "Comfort and Functionality",
       description: "We ensure that residential designs are both beautiful and functional, creating spaces that are a joy to live in.",
-      image: "/public/residentialtwo.jpg",
+      image: "/residentialtwo.jpg",
       details: [
         "From furniture selection to layout planning, we focus on creating comfortable and practical living environments."
       ]
@@ -29,7 +29,7 @@ const Residential = () => {
       id: 3,
       title: "Sustainable Solutions",
       description: "We incorporate eco-friendly practices into our residential projects to reduce environmental impact.",
-      image: "/public/residentialthree.jpg",
+      image: "/residentialthree.jpg",
       details: [
         "Our designs feature energy-efficient solutions and sustainable materials that promote a greener lifestyle."
       ]

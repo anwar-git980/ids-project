@@ -5,6 +5,7 @@ import { MdEngineering } from "react-icons/md";
 import { BiSolidBuildingHouse } from "react-icons/bi";
 import { FaPaintRoller } from "react-icons/fa";
 import { MdElectricBolt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 function Services() {
   const services = [
@@ -79,12 +80,11 @@ function Services() {
               <p className="text-gray-600 text-sm sm:text-base mb-4">
                 {service.description}
               </p>
-              <a
-                href={service.link}
+              <Link to={service.link}
                 className="bg-[#ea580c] text-white px-4 py-2 rounded-lg text-sm sm:text-base font-semibold hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 transition"
               >
                 Read More →
-              </a>
+              </Link>
             </div>
           ))}
         </div>

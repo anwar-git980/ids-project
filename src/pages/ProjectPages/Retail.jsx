@@ -11,7 +11,7 @@ const Retail = () => {
       id: 1,
       title: "Customer-Centric Layouts",
       description: "At Interior Designer Studio, We create retail spaces that prioritize customer experience and engagement.",
-      image: "/public/retailone.jpg",
+      image: "/retailone.jpg",
       details: [
         "Our layouts are designed to guide customers through the store seamlessly, optimizing product visibility and encouraging sales."
       ]
@@ -20,7 +20,7 @@ const Retail = () => {
       id: 2,
       title: "Visual Merchandising Expertise",
       description: "We design retail spaces with a focus on effective visual merchandising that highlights products in the best light.",
-      image: "/public/retailtwo.jpg",
+      image: "/retailtwo.jpg",
       details: [
         "Our team ensures that displays are eye-catching and strategically placed to maximize customer interaction."
       ]
@@ -29,7 +29,7 @@ const Retail = () => {
       id: 3,
       title: "Adaptable Designs",
       description: "We design retail spaces that can easily adapt to changing trends and product lines.",
-      image: "/public/retailthree.jpg",
+      image: "/retailthree.jpg",
       details: [
         "Our flexible designs allow for quick updates to displays and layouts, ensuring the store always feels current and appealing."
       ]
