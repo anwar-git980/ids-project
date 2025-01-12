@@ -87,7 +87,7 @@ const Contact = () => {
             </div>
             <div className="mb-4">
               <strong className="text-gray-700">Email Us:</strong>{' '}
-              <strong className="text-orange-500">alamshaikh1211@gmail.com</strong>
+              <strong className="text-orange-500">alamshaikh@interiordesignsstudio.com</strong>
             </div>
             <div className="mb-4">
               <iframe
