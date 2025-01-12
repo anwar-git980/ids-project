@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import TrunkeySlider from '/src/components/picsliders/TrunkeySlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import trunkeyone from "/public/trunkeyone.jpg";
-import trunkeytwo from "/public/trunkeytwo.jpg";
-import trunkeythree from "/public/trunkeythree.jpg";
 
 
 const Trunkey = () => {
@@ -12,7 +9,7 @@ const Trunkey = () => {
       id: 1,
       title: "Project Management",
       description: "At Interior Designer Studio, We handle every aspect of the project, from planning to completion, ensuring seamless execution.",
-      image: "/public/trunkeyone.jpg",
+      image: "/trunkeyone.jpg",
       details: [
         "Our team takes care of timelines, budgets, and quality control, delivering ready-to-use spaces that exceed expectations."
       ]
@@ -21,7 +18,7 @@ const Trunkey = () => {
       id: 2,
       title: "Vendor Coordination",
       description: "We coordinate with various vendors and suppliers to ensure the timely and smooth delivery of projects.",
-      image: "/public/trunkeytwo.jpg",
+      image: "/trunkeytwo.jpg",
       details: [
         "From procurement to installation, we manage every detail, so our clients don’t have to worry about logistics."
       ]
@@ -30,7 +27,7 @@ const Trunkey = () => {
       id: 3,
       title: "Quality Assurance",
       description: "At Interior Designer Studio, we prioritize Attention to Quality and Detail by meticulously selecting materials, ensuring precision in execution, and focusing on every aspect of the design process.",
-      image: "/public/trunkeythree.jpg",
+      image: "/trunkeythree.jpg",
       details: [
         "Our team conducts thorough inspections at every stage of the project to ensure all work is completed to the highest standards, leaving nothing to chance."
       ]

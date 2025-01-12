@@ -87,7 +87,7 @@ const Navbar = () => {
       {/* Logo Section */}
       <h1 className="text-3xl font-bold">
         <RouterLink to="/" className="cursor-pointer">
-          <img src="/src/IDSlogo.png" alt="Logo" className="h-20 w-30 md:h-25 md:w-30" />
+          <img src="/IDSlogo.png" alt="Logo" className="h-20 w-30 md:h-25 md:w-30" />
         </RouterLink>
       </h1>
 
@@ -171,7 +171,7 @@ const Navbar = () => {
             onClick={() => setNav(false)}
             className="cursor-pointer"
           >
-            <img src="/src/IDSlogo.png" alt="Logo" style={{ height: '80px', width: '100px' }} />
+            <img src="/IDSlogo.png" alt="Logo" style={{ height: '80px', width: '100px' }} />
           </RouterLink>
         </h1>
 

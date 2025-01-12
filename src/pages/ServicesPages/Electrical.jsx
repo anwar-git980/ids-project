@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import ElectricalSlider from '/src/components/picsliders/ElectricalSlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import electricalone from "/public/electricalone.jpg";
-import electricaltwo from "/public/electricaltwo.jpg";
-import electricalthree from "/public/electricalthree.jpg";
 
 
 const Electrical = () => {
@@ -12,7 +9,7 @@ const Electrical = () => {
       id: 1,
       title: "Technical Expertise",
       description: "At Interior Designer Studio, We ensure safe and efficient electrical layouts that meet both functional and aesthetic needs.",
-      image: "/public/electricalone.jpg",
+      image: "/electricalone.jpg",
       details: [
         "Our team specializes in creating wiring diagrams and integrating smart home technologies to optimize energy consumption and enhance everyday living experiences."
       ]
@@ -21,7 +18,7 @@ const Electrical = () => {
       id: 2,
       title: "Safety Standards Compliance",
       description: "We strictly adhere to industry safety codes and regulations to protect our clients and their properties. ",
-      image: "/public/electricaltwo.jpg",
+      image: "/electricaltwo.jpg",
       details: [
         "All our electrical installations are tested and certified to ensure they meet safety guidelines, providing our clients with peace of mind."
       ]
@@ -30,7 +27,7 @@ const Electrical = () => {
       id: 3,
       title: "Innovative Lighting Solutions",
       description: "We design lighting solutions that blend functionality with style, elevating the ambiance of any space.",
-      image: "/public/electricalthree.jpg",
+      image: "/electricalthree.jpg",
       details: [
         "Our team offers energy-efficient and automated lighting options, including mood lighting and sensor-based controls for modern living."
       ]

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import ExteriorSlider from '/src/components/picsliders/ExteriorSlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import exteriorone from "/public/exteriorone.jpg";
-import exteriortwo from "/public/exteriortwo.jpg";
-import exteriorthree from "/public/exteriorthree.jpg";
 
 
 const Exterior = () => {
@@ -12,7 +9,7 @@ const Exterior = () => {
       id: 1,
       title: "Durability and Quality Craftsmanship",
       description: "At Interior Designer Studio, using premium materials and skilled workmanship to ensure the exterior withstands weather and time.",
-      image: "/public/exteriorone.jpg",
+      image: "/exteriorone.jpg",
       details: [
         "At Interior Designer Studio, we ensure durability and quality craftsmanship in every exterior project. We use premium materials and expert techniques, ensuring that our designs withstand harsh weather and stand the test of time. Our skilled team focuses on attention to detail and rigorous quality checks, delivering long-lasting, low-maintenance exteriors with impeccable finishes."
       ]
@@ -21,7 +18,7 @@ const Exterior = () => {
       id: 2,
       title: "Aesthetic and Functional Design",
       description: "Combining visual appeal with practical solutions tailored to the project’s requirements.",
-      image: "/public/exteriortwo.jpg",
+      image: "/exteriortwo.jpg",
       details: [
         "We work closely with clients to design beautiful spaces that are practical and tailored to their needs. From optimizing outdoor areas to selecting materials that enhance curb appeal, our designs ensure both style and usability, perfectly aligned with the client’s lifestyle."
       ]
@@ -30,7 +27,7 @@ const Exterior = () => {
       id: 3,
       title: "Timely and Cost-Effective Execution",
       description: "Delivering projects on schedule, within budget, without compromising quality.",
-      image: "/public/exteriorthree.jpg",
+      image: "/exteriorthree.jpg",
       details: [
         "We ensure timely and cost-effective exterior contracts by carefully planning, managing resources, and working with trusted suppliers. Through efficient design and proactive communication, we deliver high-quality, on-time projects within budget, offering great value to our clients."
       ]

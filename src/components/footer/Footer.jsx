@@ -3,6 +3,7 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,12 +25,12 @@ const Footer = () => {
         <div className="mt-4">
           <h3 className="text-white font-semibold text-xl mb-4 whitespace-nowrap">Services</h3>
           <ul>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/trunkey" className="hover:underline">Trunkey Contract</a></li>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/interior" className="hover:underline">Interiors Services</a></li>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/civil" className="hover:underline">Civil Services</a></li>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/exterior" className="hover:underline">Exterior Services</a></li>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/painting" className="hover:underline">Painting Services</a></li>
-          <li className="mb-2 text-lg"><a href="/ServicesPages/electrical" className="hover:underline">Electrical Services</a></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/trunkey" className="hover:underline">Trunkey Contract</Link></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/interior" className="hover:underline">Interiors Services</Link></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/civil" className="hover:underline">Civil Services</Link></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/exterior" className="hover:underline">Exterior Services</Link></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/painting" className="hover:underline">Painting Services</Link></li>
+          <li className="mb-2 text-lg"><Link to="/ServicesPages/electrical" className="hover:underline">Electrical Services</Link></li>
           </ul>
         </div>
 

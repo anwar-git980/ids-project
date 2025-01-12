@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import InteriorSlider from '/src/components/picsliders/InteriorSlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import interiorone from "/public/interiorone.jpg";
-import interiortwo from "/public/interiortwo.jpg";
-import interiorthree from "/public/interiorthree.jpg";
 
 const Interior = () => {
   const services = [
@@ -11,7 +8,7 @@ const Interior = () => {
       id: 1,
       title: "Space Optimization",
       description: "At Interior Designer Studio, We transform spaces to make the most out of every square foot while maintaining aesthetic appeal.",
-      image: "/public/interiorone.jpg",
+      image: "/interiorone.jpg",
       details: [
         "Whether it’s a compact apartment or a spacious office, we ensure that every design element serves a purpose and adds value."
       ]
@@ -20,7 +17,7 @@ const Interior = () => {
       id: 2,
       title: "Aesthetic Versatility",
       description: "Our interior designs are tailored to reflect each client's unique taste and lifestyle.",
-      image: "/public/interiortwo.jpg",
+      image: "/interiortwo.jpg",
       details: [
         "From modern minimalism to classic elegance, we bring versatility to our designs, ensuring timeless and personalized spaces."
       ]
@@ -29,7 +26,7 @@ const Interior = () => {
       id: 3,
       title: "Quality Material Selection Expertise",
       description: "We carefully select materials that balance durability, aesthetics, and sustainability.",
-      image: "/public/interiorthree.jpg",
+      image: "/interiorthree.jpg",
       details: [
         "Our team stays updated with the latest trends in finishes and materials to deliver high-quality results that stand the test of time."
       ]

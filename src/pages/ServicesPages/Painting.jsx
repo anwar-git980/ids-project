@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import PaintingSlider from '/src/components/picsliders/PaintingSlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import paintingone from "/public/paintingone.jpg";
-import paintingtwo from "/public/paintingtwo.jpg";
-import paintingthree from "/public/paintingthree.png";
+
 
 const Painting = () => {
   const services = [
@@ -11,7 +9,7 @@ const Painting = () => {
       id: 1,
       title: "Surface Preparation Skills",
       description: "At Interior Designer Studio, We focus on preparing surfaces thoroughly to ensure a smooth and lasting finish.",
-      image: "/public/paintingone.jpg",
+      image: "/paintingone.jpg",
       details: [
         "Our painting process includes cleaning, priming, and repairing surfaces to achieve the best results, even on challenging substrates."
       ]
@@ -20,7 +18,7 @@ const Painting = () => {
       id: 2,
       title: "Color Consultation",
       description: "We help our clients choose the perfect color schemes to set the desired mood and ambiance.",
-      image: "/public/paintingtwo.jpg",
+      image: "/paintingtwo.jpg",
       details: [
         "Our team understands color psychology and uses it to create spaces that evoke the right emotions, enhancing both aesthetics and functionality."
       ]
@@ -29,7 +27,7 @@ const Painting = () => {
       id: 3,
       title: "Specialized Finishes",
       description: "We offer a variety of painting finishes that add character and uniqueness to any space.",
-      image: "/public/paintingthree.png",
+      image: "/paintingthree.png",
       details: [
         "Our expertise includes texture painting, faux finishes, and waterproof coatings, ensuring both beauty and durability."
       ]

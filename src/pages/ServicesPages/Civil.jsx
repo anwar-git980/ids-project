@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import CivilSlider from '/src/components/picsliders/CivilSlider';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-// import civilone from "/src/civilphotos/civilone.jpg";
-import civilone from "/public/civilone.jpg";
-import civiltwo from "/public/civiltwo.jpg";
-import civilthree from "/public/civilthree.jpg";
+
 
 const Civil = () => {
   const services = [
@@ -12,7 +9,7 @@ const Civil = () => {
       id: 1,
       title: "Expertise in Structural Integrity",
       description: "At Interior Designer Studio, our Expertise in Structural Integrity ensures every design is built on a solid foundation.",
-      image: "/public/civilone.jpg",
+      image: "/civilone.jpg",
       details: [
         "We collaborate with engineers to reinforce structures, ensuring safety and compliance. We focus on creating durable, functional spaces that are secure and long-lasting, giving clients peace of mind."
       ]
@@ -21,7 +18,7 @@ const Civil = () => {
       id: 2,
       title: "Budget Management and Cost Efficiency",
       description: "We provide Budget Management and Cost Efficiency by creating detailed cost plans, sourcing high-quality yet affordable materials, and optimizing designs to minimize waste. ",
-      image: "/public/civiltwo.jpg",
+      image: "/civiltwo.jpg",
       details: [
         "We ensure transparency, track expenses carefully, and offer creative solutions to maximize value, delivering stunning, functional spaces that align with our clients' budgets without compromising quality or aesthetics."
       ]
@@ -30,7 +27,7 @@ const Civil = () => {
       id: 3,
       title: "Attention to Quality and Detail",
       description: "We prioritize Attention to Quality and Detail by meticulously selecting materials, ensuring precision in execution, and focusing on every aspect of the design process.",
-      image: "/public/civilthree.jpg",
+      image: "/civilthree.jpg",
       details: [
         "From conceptualization to completion, we carefully oversee every detail to maintain the highest standards. Whether it's residential, retail, or commercial spaces, we ensure flawless finishes, functional layouts, and designs that reflect our clients' vision. Our commitment to quality guarantees spaces that are not only beautiful but also durable and perfectly crafted."
       ]
