@@ -1,113 +1,360 @@
+// import { useState, useEffect } from "react";
+// import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
+
+// export function ImageSlider({ images }) {
+//   const [imageIndex, setImageIndex] = useState(0);
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setImageIndex((index) => (index + 1) % images.length);
+//     }, 5000); // Change image every 5 seconds
+
+//     return () => clearInterval(timer);
+//   }, [images.length]);
+
+//   function showNextImage() {
+//     setImageIndex((index) => {
+//       if (index === images.length - 1) return 0;
+//       return index + 1;
+//     });
+//   }
+
+//   function showPrevImage() {
+//     setImageIndex((index) => {
+//       if (index === 0) return images.length - 1;
+//       return index - 1;
+//     });
+//   }
+
+//   return (
+//     <section
+//       aria-label="Image Slider"
+//       style={{
+//         width: "100%",
+//         height: "100%",
+//         position: "relative",
+//         boxSizing: "border-box",
+//       }}
+//     >
+//       <a
+//         href="#after-image-slider-controls"
+//         style={{
+//           position: "absolute",
+//           width: "1px",
+//           height: "1px",
+//           padding: 0,
+//           margin: "-1px",
+//           overflow: "hidden",
+//           border: 0,
+//           clip: "rect(0, 0, 0, 0)",
+//           backgroundColor: "transparent",
+//         }}
+//         className="skip-link"
+//       >
+//         Skip Image Slider Controls
+//       </a>
+//       <div
+//         style={{
+//           width: "100%",
+//           height: "100%",
+//           display: "flex",
+//           overflow: "hidden",
+//         }}
+//       >
+//         {images.map(({ url, alt }, index) => (
+//           <img
+//             key={url}
+//             src={url}
+//             alt={alt}
+//             aria-hidden={imageIndex !== index}
+//             style={{
+//               objectFit: "cover",
+//               width: "100%",
+//               height: "100%",
+//               display: "block",
+//               flexShrink: 0,
+//               flexGrow: 0,
+//               transform: `translateX(${-100 * imageIndex}%)`,
+//               transition: "transform 300ms ease-in-out",
+//             }}
+//           />
+//         ))}
+//       </div>
+//       <button
+//         onClick={showPrevImage}
+//         style={{
+//           all: "unset",
+//           display: "block",
+//           position: "absolute",
+//           top: 0,
+//           bottom: 0,
+//           left: 0,
+//           padding: "1rem",
+//           cursor: "pointer",
+//           transition: "background-color 100ms ease-in-out",
+//           backgroundColor: "rgba(0, 0, 0, 0.2)",
+//         }}
+//         aria-label="View Previous Image"
+//       >
+//         <ArrowBigLeft
+//           style={{ stroke: "white", fill: "black", width: "2rem", height: "2rem" }}
+//           aria-hidden
+//         />
+//       </button>
+//       <button
+//         onClick={showNextImage}
+//         style={{
+//           all: "unset",
+//           display: "block",
+//           position: "absolute",
+//           top: 0,
+//           bottom: 0,
+//           right: 0,
+//           padding: "1rem",
+//           cursor: "pointer",
+//           transition: "background-color 100ms ease-in-out",
+//           backgroundColor: "rgba(0, 0, 0, 0.2)",
+//         }}
+//         aria-label="View Next Image"
+//       >
+//         <ArrowBigRight
+//           style={{ stroke: "white", fill: "black", width: "2rem", height: "2rem" }}
+//           aria-hidden
+//         />
+//       </button>
+//       <div
+//         style={{
+//           position: "absolute",
+//           bottom: ".5rem",
+//           left: "50%",
+//           transform: "translateX(-50%)",
+//           display: "flex",
+//           gap: ".25rem",
+//         }}
+//       >
+//         {images.map((_, index) => (
+//           <button
+//             key={index}
+//             onClick={() => setImageIndex(index)}
+//             style={{
+//               all: "unset",
+//               display: "block",
+//               cursor: "pointer",
+//               width: "1rem",
+//               height: "1rem",
+//               transition: "transform 100ms ease-in-out",
+//               transform: index === imageIndex ? "scale(1.2)" : "scale(1)",
+//             }}
+//             aria-label={`View Image ${index + 1}`}
+//           >
+//             {index === imageIndex ? (
+//               <CircleDot
+//                 style={{
+//                   stroke: "white",
+//                   fill: "black",
+//                   height: "100%",
+//                   width: "100%",
+//                 }}
+//                 aria-hidden
+//               />
+//             ) : (
+//               <Circle
+//                 style={{
+//                   stroke: "white",
+//                   fill: "black",
+//                   height: "100%",
+//                   width: "100%",
+//                 }}
+//                 aria-hidden
+//               />
+//             )}
+//           </button>
+//         ))}
+//       </div>
+//       <div id="after-image-slider-controls" />
+//     </section>
+//   );
+// }
+
+
+
 import { useState, useEffect } from "react";
 import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
 
-export default function ImageSlider({ images = [], autoSlideInterval = 5000 }) {
+export function ImageSlider({ images }) {
   const [imageIndex, setImageIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-
-  const showNextImage = useCallback(() => {
-    setImageIndex(index => (index + 1) % images.length);
-  }, [images.length]);
-
-  const showPrevImage = useCallback(() => {
-    setImageIndex(index => (index === 0 ? images.length - 1 : index - 1));
-  }, [images.length]);
 
   useEffect(() => {
-    if (!isPaused && autoSlideInterval > 0) {
-      const timer = setInterval(showNextImage, autoSlideInterval);
-      return () => clearInterval(timer);
-    }
-  }, [isPaused, autoSlideInterval, showNextImage]);
+    const timer = setInterval(() => {
+      setImageIndex((index) => (index + 1) % images.length);
+    }, 5000); // Change image every 5 seconds
 
-  if (!images.length) return null;
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  function showNextImage() {
+    setImageIndex((index) => {
+      if (index === images.length - 1) return 0;
+      return index + 1;
+    });
+  }
+
+  function showPrevImage() {
+    setImageIndex((index) => {
+      if (index === 0) return images.length - 1;
+      return index - 1;
+    });
+  }
 
   return (
-    <section 
-      aria-label="Image Slider" 
-      className="relative w-full h-full"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+    <section
+      aria-label="Image Slider"
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+        boxSizing: "border-box",
+      }}
     >
       <a
         href="#after-image-slider-controls"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-2 focus:bg-white"
+        style={{
+          position: "absolute",
+          width: "1px",
+          height: "1px",
+          padding: 0,
+          margin: "-1px",
+          overflow: "hidden",
+          border: 0,
+          clip: "rect(0, 0, 0, 0)",
+          backgroundColor: "transparent",
+        }}
+        className="skip-link"
       >
         Skip Image Slider Controls
       </a>
-
-      <div className="w-full h-full flex overflow-hidden">
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          overflow: "hidden",
+        }}
+      >
         {images.map(({ url, alt }, index) => (
           <img
             key={url}
             src={url}
             alt={alt}
             aria-hidden={imageIndex !== index}
-            className="object-cover w-full h-full flex-shrink-0 flex-grow-0 transition-transform duration-300 ease-in-out"
-            style={{ transform: `translateX(${-100 * imageIndex}%)` }}
-            loading={index === 0 ? "eager" : "lazy"}
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "100%",
+              display: "block",
+              flexShrink: 0,
+              flexGrow: 0,
+              transform: `translateX(${-100 * imageIndex}%)`,
+              transition: "transform 300ms ease-in-out",
+            }}
           />
         ))}
       </div>
-
       <button
         onClick={showPrevImage}
         style={{
           all: "unset",
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           position: "absolute",
-          top: 0,
-          bottom: 0,
-          left: 0,
-          padding: "1rem",
+          top: "50%",
+          transform: "translateY(-50%)",
+          left: "1rem",
+          width: "3rem",
+          height: "3rem",
           cursor: "pointer",
           transition: "background-color 100ms ease-in-out",
-          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          borderRadius: "50%",
         }}
         aria-label="View Previous Image"
       >
         <ArrowBigLeft
-          style={{ stroke: "white", fill: "black", width: "2rem", height: "2rem" }}
+          style={{ stroke: "white", width: "2rem", height: "2rem" }}
           aria-hidden
         />
       </button>
-
       <button
         onClick={showNextImage}
         style={{
           all: "unset",
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           position: "absolute",
-          top: 0,
-          bottom: 0,
-          right: 0,
-          padding: "1rem",
+          top: "50%",
+          transform: "translateY(-50%)",
+          right: "1rem",
+          width: "3rem",
+          height: "3rem",
           cursor: "pointer",
           transition: "background-color 100ms ease-in-out",
-          backgroundColor: "rgba(0, 0, 0, 0.2)",
+          backgroundColor: "rgba(0, 0, 0, 0.3)",
+          borderRadius: "50%",
         }}
         aria-label="View Next Image"
       >
         <ArrowBigRight
-          style={{ stroke: "white", fill: "black", width: "2rem", height: "2rem" }}
+          style={{ stroke: "white", width: "2rem", height: "2rem" }}
           aria-hidden
         />
       </button>
-
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1" role="tablist">
+      <div
+        style={{
+          position: "absolute",
+          bottom: ".5rem",
+          left: "50%",
+          transform: "translateX(-50%)",
+          display: "flex",
+          gap: ".25rem",
+        }}
+      >
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => setImageIndex(index)}
-            className="w-4 h-4 transition-transform hover:scale-125 focus:outline-none focus:ring-2 focus:ring-white rounded-full"
+            style={{
+              all: "unset",
+              display: "block",
+              cursor: "pointer",
+              width: "1rem",
+              height: "1rem",
+              transition: "transform 100ms ease-in-out",
+              transform: index === imageIndex ? "scale(1.2)" : "scale(1)",
+            }}
             aria-label={`View Image ${index + 1}`}
-            aria-selected={index === imageIndex}
-            role="tab"
           >
             {index === imageIndex ? (
-              <CircleDot className="w-full h-full text-white fill-black" aria-hidden />
+              <CircleDot
+                style={{
+                  stroke: "white",
+                  fill: "black",
+                  height: "100%",
+                  width: "100%",
+                }}
+                aria-hidden
+              />
             ) : (
-              <Circle className="w-full h-full text-white fill-black" aria-hidden />
+              <Circle
+                style={{
+                  stroke: "white",
+                  fill: "black",
+                  height: "100%",
+                  width: "100%",
+                }}
+                aria-hidden
+              />
             )}
           </button>
         ))}

@@ -1,14 +1,71 @@
-// import React from 'react'
+// import React from "react";
+// import CountUp from "react-countup";
+// import { useInView } from "react-intersection-observer";
 
-// function Projects() {
+// function Projects({ image, projects, clients, experience }) {
+//   const { ref, inView } = useInView({
+//     threshold: 0.01, // Trigger animation when 1% of the component is in view
+//     triggerOnce: false, // Reanimates every time the section comes into view
+//   });
+
 //   return (
-//     <section id="projects" className="h-screen bg-gray-400 flex items-center justify-center">
-//       <h2 className="text-3xl font-bold">Our Projects</h2>
+//     <section
+//       id="projects"
+//       className="min-h-screen bg-gray-100 flex items-center justify-center px-4"
+//     >
+//       <div
+//         ref={ref}
+//         className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center max-w-6xl mx-auto"
+//       >
+//         {/* Image Section */}
+//         <div className="rounded-lg overflow-hidden shadow-md">
+//           <img
+//             src={image}
+//             alt="Project showcase"
+//             className="w-full h-auto object-cover"
+//           />
+//         </div>
+
+//         {/* Numbers Section */}
+//         <div>
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={projects} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Projects</p>
+//             </div>
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={clients} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Clients</p>
+//             </div>
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={experience} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Years of Experience</p>
+//             </div>
+//           </div>
+//           <p className="mt-6 text-gray-700 text-center lg:text-left">
+//           Our interior design studio specializes in creating exceptional spaces for retail, commercial, and residential projects, combining high-quality design with cost-effective solutions. 
+//           We are committed to delivering innovative, functional, and aesthetically pleasing environments tailored to our clients' needs and budgets. Whether it's designing a stylish retail store, 
+//           a productive office space, or a cozy home, we focus on maximizing the potential of every space, ensuring it aligns with your vision while maintaining affordability without compromising on quality. 
+//           Our team brings expertise and attention to detail to each project, ensuring a perfect balance of style, functionality, and value.
+//           </p>
+//         </div>
+//       </div>
 //     </section>
-//   )
+//   );
 // }
 
-// export default Projects
+// export default Projects;
+
+
+
+
+
 
 import React from "react";
 import CountUp from "react-countup";
@@ -72,7 +129,14 @@ function Projects({ image, projects, clients, experience }) {
               <p className="text-lg text-gray-600">Years of Experience</p>
             </div>
           </div>
-        ))}
+          <p className="mt-6 text-gray-700 text-center lg:text-left ml-10">
+          Our interior design studio specializes in creating exceptional spaces for retail, commercial, and residential projects, combining high-quality design with cost-effective solutions. 
+          We are committed to delivering innovative, functional, and aesthetically pleasing environments tailored to our clients' needs and budgets. Whether it's designing a stylish retail store, 
+          a productive office space, or a cozy home, we focus on maximizing the potential of every space, ensuring it aligns with your vision while maintaining affordability without compromising on quality. 
+          Our team brings expertise and attention to detail to each project, ensuring a perfect balance of style, functionality, and value.
+          </p>
+        </div>
+        <br></br>
       </div>
     </section>
   );
