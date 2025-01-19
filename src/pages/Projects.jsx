@@ -1,50 +1,145 @@
-// import React from 'react'
+// import React from "react";
+// import CountUp from "react-countup";
+// import { useInView } from "react-intersection-observer";
 
-// function Projects() {
+// function Projects({ image, projects, clients, experience }) {
+//   const { ref, inView } = useInView({
+//     threshold: 0.01, // Trigger animation when 1% of the component is in view
+//     triggerOnce: false, // Reanimates every time the section comes into view
+//   });
+
 //   return (
-//     <section id="projects" className="h-screen bg-gray-400 flex items-center justify-center">
-//       <h2 className="text-3xl font-bold">Our Projects</h2>
+//     <section
+//       id="projects"
+//       className="min-h-screen bg-gray-100 flex items-center justify-center px-4"
+//     >
+//       <div
+//         ref={ref}
+//         className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center max-w-6xl mx-auto"
+//       >
+//         {/* Image Section */}
+//         <div className="rounded-lg overflow-hidden shadow-md">
+//           <img
+//             src={image}
+//             alt="Project showcase"
+//             className="w-full h-auto object-cover"
+//           />
+//         </div>
+
+//         {/* Numbers Section */}
+//         <div>
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={projects} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Projects</p>
+//             </div>
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={clients} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Clients</p>
+//             </div>
+//             <div>
+//               <h3 className="text-4xl font-bold text-gray-800">
+//                 {inView && <CountUp start={0} end={experience} duration={5} />}+
+//               </h3>
+//               <p className="text-lg text-gray-600">Years of Experience</p>
+//             </div>
+//           </div>
+//           <p className="mt-6 text-gray-700 text-center lg:text-left">
+//           Our interior design studio specializes in creating exceptional spaces for retail, commercial, and residential projects, combining high-quality design with cost-effective solutions. 
+//           We are committed to delivering innovative, functional, and aesthetically pleasing environments tailored to our clients' needs and budgets. Whether it's designing a stylish retail store, 
+//           a productive office space, or a cozy home, we focus on maximizing the potential of every space, ensuring it aligns with your vision while maintaining affordability without compromising on quality. 
+//           Our team brings expertise and attention to detail to each project, ensuring a perfect balance of style, functionality, and value.
+//           </p>
+//         </div>
+//       </div>
 //     </section>
-//   )
+//   );
 // }
 
-// export default Projects
+// export default Projects;
+
+
+
+
+
 
 import React from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
+import projectpic from "/src/projectpic.jpg"
 
-const projects = [
-  { id: 1, alt: "Project 1" },
-  { id: 2, alt: "Project 2" },
-  { id: 3, alt: "Project 3" },
-];
+function Projects({ image, projects, clients, experience }) {
+  const { ref, inView } = useInView({
+    threshold: 0.01,
+    triggerOnce: false,
+  });
 
-const Projects = () => {
   return (
-    <section className="projects-section py-10">
-      {/* Title */}
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold">PROJECTS</h2>
-        <p className="text-gray-600 max-w-xl mx-auto mt-4">
-          Delectus voluptatum distinctio quos eius excepturi sunt pariatur,
-          aut, doloribus officia ea molestias beatae laudantium, quam odio
-          ipsum veritatis est maiores velit quasi blanditiis et natus
-          accusamus itaque.
-        </p>
-      </div>
+    <section
+      id="projects"
+      className="min-h-screen bg-amber-50 flex flex-col items-center px-4 pt-16"
+    >
+      {/* Projects Heading */}
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16 text-center">
+        Projects
+      </h2>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="w-full h-64 bg-gray-300 rounded-lg shadow-md flex items-center justify-center"
-          >
-            <p className="text-gray-500">{project.alt}</p>
+      <div
+        ref={ref}
+        className="grid lg:grid-cols-2 grid-cols-1 gap-8 items-center max-w-6xl mx-auto"
+      >
+        {/* Image Section with Hover Effect */}
+        <div className="rounded-lg overflow-hidden shadow-md group transition-all duration-300 transform hover:scale-105">
+          <div className="relative">
+            <img
+              src={projectpic}
+              alt="Project showcase"
+              className="w-full h-auto object-cover transition-transform duration-300 group-hover:brightness-90"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+              <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-lg font-semibold">
+              </span>
+            </div>
           </div>
-        ))}
+        </div>
+
+        {/* Numbers Section */}
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h3 className="text-4xl font-bold text-gray-800">
+                {inView && <CountUp start={0} end={projects} duration={5} />}+
+              </h3>
+              <p className="text-lg text-gray-600">Projects</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold text-gray-800">
+                {inView && <CountUp start={0} end={clients} duration={5} />}+
+              </h3>
+              <p className="text-lg text-gray-600">Clients</p>
+            </div>
+            <div>
+              <h3 className="text-4xl font-bold text-gray-800">
+                {inView && <CountUp start={0} end={experience} duration={5} />}+
+              </h3>
+              <p className="text-lg text-gray-600">Years of Experience</p>
+            </div>
+          </div>
+          <p className="mt-6 text-gray-700 text-center lg:text-left ml-10">
+          Our interior design studio specializes in creating exceptional spaces for retail, commercial, and residential projects, combining high-quality design with cost-effective solutions. 
+          We are committed to delivering innovative, functional, and aesthetically pleasing environments tailored to our clients' needs and budgets. Whether it's designing a stylish retail store, 
+          a productive office space, or a cozy home, we focus on maximizing the potential of every space, ensuring it aligns with your vision while maintaining affordability without compromising on quality. 
+          Our team brings expertise and attention to detail to each project, ensuring a perfect balance of style, functionality, and value.
+          </p>
+        </div>
+        <br></br>
       </div>
     </section>
   );
-};
+}
 
 export default Projects;
